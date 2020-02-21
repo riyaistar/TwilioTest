@@ -1,24 +1,28 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
+import { FirstComponent } from './components/Component1'
+import DashboardLeft from './components/DashboardLeft'
+import DashboardCenter from './components/DashboardCenter'
+import DashboardRight from './components/DashboardRight'
+import { TestJSX } from './components/TestJSX'
+import 'bootstrap/dist/css/bootstrap.min.css';
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
+import TwilioTest from './components/TwilioTest';
+
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      {/* <Row className="m-0">
+        <Col><DashboardCenter /></Col>
+        <Col><FirstComponent name="mitra" id="34" /></Col>
+        <Col><FirstComponent name="riya" id="12" /></Col>
+      </Row> */}
+
+      <TwilioTest></TwilioTest>
+
     </div>
   );
 }
