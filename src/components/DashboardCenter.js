@@ -12,7 +12,7 @@ class DashboardCenter extends Component {
 
     getLocation() {
         if (navigator.geolocation) {
-            navigator.geolocation.getCurrentPosition(this.showPosition, this.showError, {
+            navigator.geolocation.getCurrentPosition(this.showPosition.bind(this), this.showError, { //bind showposition callback function to 'this'
                 enableHighAccuracy: true,
                 timeout: 5000,
                 maximumAge: 0
@@ -23,15 +23,16 @@ class DashboardCenter extends Component {
     }
 
     showPosition(position) {
-        // this.setState(
-        //     {
-        //         latitude: position.coords.latitude,
-        //         longitude: position.coords.longitude
-        //     },
-        //     () => {
-        //         console.log("Callback from setting state", position)
-        //     }
-        // )
+        console.log(this)
+        this.setState(
+            {
+                latitude: position.coords.latitude,
+                longitude: position.coords.longitude
+            },
+            () => {
+                console.log("Callback from setting state", position)
+            }
+        )
         console.log("Latitude: " + position.coords.latitude);
         console.log("Longitude: " + position.coords.longitude);
     }

@@ -15,11 +15,11 @@ import TwilioTest from './components/TwilioTest';
 function App() {
   return (
     <div className="App">
-      {/* <Row className="m-0">
+       <Row className="m-0">
         <Col><DashboardCenter /></Col>
         <Col><FirstComponent name="mitra" id="34" /></Col>
         <Col><FirstComponent name="riya" id="12" /></Col>
-      </Row> */}
+      </Row> 
 
       <TwilioTest></TwilioTest>
 
